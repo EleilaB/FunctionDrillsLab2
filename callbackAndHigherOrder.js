@@ -77,29 +77,36 @@ last(names, lastName => {
 
 
 
-// ////////// PROBLEM 4 //////////
+////////// PROBLEM 4 //////////
 
-// /*
-//   Write a function called contains that takes in three parameters: an array, a name and a callback.  
-//   Check if the name exists in the array. 
-//   If it does, invoke the callback with true as the argument. 
-//   If the name does not exist, invoke the callback with false as the argument.
-// */
+/*
+  Write a function called contains that takes in three parameters: an array, a name and a callback.  
+  Check if the name exists in the array. 
+  If it does, invoke the callback with true as the argument. 
+  If the name does not exist, invoke the callback with false as the argument.
+*/
 
-// // CODE HERE 
+// CODE HERE 
 
+function contains(arr, name, cb){
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i] === name){
+      cb(true)
+    }
+  }
+}
 
-// // UNCOMMENT THE FUNCTION CALL BELOW
-// // RUN THIS FILE WITH NODE
-// // CHECK YOUR ANSWER
+// UNCOMMENT THE FUNCTION CALL BELOW
+// RUN THIS FILE WITH NODE
+// CHECK YOUR ANSWER
 
-// // contains(names, 'Colt', result => {
-// //   if(result === true){
-// //     console.log('Colt is in the array')
-// //   } else {
-// //     console.log('Colt is not in the array')
-// //   }
-// // })
+contains(names, 'Colt', result => {
+  if(result === true){
+    console.log('Colt is in the array')
+  } else {
+    console.log('Colt is not in the array')
+  }
+})
 
 
 
