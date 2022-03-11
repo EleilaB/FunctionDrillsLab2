@@ -21,33 +21,36 @@ multiply(4, 3, answer => {
 
 
 
-// ////////// PROBLEMS 2 - 6 //////////
+////////// PROBLEMS 2 - 6 //////////
 
-// // The names array will be used in problems 2 - 6.
+// The names array will be used in problems 2 - 6.
 
-// // Do not edit the code below.
-// var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
-// // Do not edit the code above.
-
-
-
-// ////////// PROBLEM 2 //////////
-
-// /*
-//   Write a function called first that takes in two parameters, an array and a callback function.
-//   Then invoke the callback function, passing in the first element in the array as it's argument.
-// */
-
-// // CODE HERE 
+// Do not edit the code below.
+var names = ['Tyler', 'Cahlan', 'Ryan', 'Colt', 'Tyler', 'Blaine', 'Cahlan']
+// Do not edit the code above.
 
 
-// // UNCOMMENT THE FUNCTION CALL BELOW
-// // RUN THIS FILE WITH NODE
-// // CHECK YOUR ANSWER
 
-// // first(names, firstName => {
-// //   console.log('The first name in names is ' + firstName)
-// // })
+////////// PROBLEM 2 //////////
+
+/*
+  Write a function called first that takes in two parameters, an array and a callback function.
+  Then invoke the callback function, passing in the first element in the array as it's argument.
+*/
+
+// CODE HERE 
+
+function first(arr, cb){
+  return cb(arr[0])
+}
+
+// UNCOMMENT THE FUNCTION CALL BELOW
+// RUN THIS FILE WITH NODE
+// CHECK YOUR ANSWER
+
+first(names, firstName => {
+  console.log('The first name in names is ' + firstName)
+})
 
 
 
