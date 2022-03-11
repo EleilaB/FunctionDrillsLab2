@@ -110,26 +110,37 @@ contains(names, 'Colt', result => {
 
 
 
-// ////////// PROBLEM 5 //////////
+////////// PROBLEM 5 //////////
 
-// /*
-//   Write a function called uniq that takes in an array and a callback function.
-//   Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
-//   Hint: you can use a nested for loop to do this.
-// */
+/*
+  Write a function called uniq that takes in an array and a callback function.
+  Remove any duplicate values from the array, and invoke the callback with the modified array as an argument.
+  Hint: you can use a nested for loop to do this.
+*/
 
-// // CODE HERE
+// CODE HERE
 
-// /*
-//   Invoke the uniq function, passing in the names array from above and a callback function.
-//   The callback function should take in one parameter called uniqArr.
-//   The callback should print a string that says:
-//   'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
-// */
+function uniq(arr, cb){
+  uniqArr = new Array
+  arr.forEach((c) => {
+    if (!uniqArr.includes(c)) {
+        uniqArr.push(c);
+    }
+  }); return cb(uniqArr)
+}
 
-// // CODE HERE
+/*
+  Invoke the uniq function, passing in the names array from above and a callback function.
+  The callback function should take in one parameter called uniqArr.
+  The callback should print a string that says:
+  'The new names array with all the duplicate items removed is [UNIQARRPARAM].'
+*/
 
+// CODE HERE
 
+uniq(names, uniqArr => {
+  console.log('The new names array with all the duplicate items removed is' + uniqArr)
+})
 
 // ////////// PROBLEM 6 //////////
 
