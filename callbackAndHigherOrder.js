@@ -54,23 +54,26 @@ first(names, firstName => {
 
 
 
-// ////////// PROBLEM 3 //////////
+////////// PROBLEM 3 //////////
 
-// /*
-//   Write a function called last that takes in an array and a callback function. 
-//   Then invoke the callback, passing in the last element in the array as the argument.
-// */
+/*
+  Write a function called last that takes in an array and a callback function. 
+  Then invoke the callback, passing in the last element in the array as the argument.
+*/
 
-// // CODE HERE
+// CODE HERE
 
+function last(arr, cb){
+  return cb(arr[arr.length - 1])
+}
 
-// // UNCOMMENT THE FUNCTION CALL BELOW
-// // RUN THIS FILE WITH NODE
-// // CHECK YOUR ANSWER
+// UNCOMMENT THE FUNCTION CALL BELOW
+// RUN THIS FILE WITH NODE
+// CHECK YOUR ANSWER
 
-// // last(names, lastName => {
-// //   console.log('The last name in names is ' + lastName)
-// // })
+last(names, lastName => {
+  console.log('The last name in names is ' + lastName)
+})
 
 
 
