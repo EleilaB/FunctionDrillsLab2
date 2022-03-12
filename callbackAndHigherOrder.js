@@ -157,6 +157,11 @@ uniq(names, cb => {
 
 // // CODE HERE 
 
+function each(arr, cb){
+  for(let i = 0; i < arr.length; i++){
+    cb(arr[i], i)
+  }
+}
 
 // /*
 //   Invoke the each function, passing in the names array and a callback function.
@@ -167,6 +172,9 @@ uniq(names, cb => {
 
 // // CODE HERE
 
+each(names, (item, index) => {
+  console.log(`The item at index ${index} is ${item}.`)
+})
 
 // ////////// PROBLEM 7 //////////
 
