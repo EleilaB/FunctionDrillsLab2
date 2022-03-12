@@ -224,59 +224,70 @@ getUserById(users, '16t', user => {
   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
 })
 
-// ////////// CHALLENGE //////////
+////////// CHALLENGE //////////
 
-// /*
-//   You'll be writing a higher order function that returns
-//   another function. 
+/*
+  You'll be writing a higher order function that returns
+  another function. 
 
-//   Create a function called addingFactory that takes in
-//   one parameter (it will be a number).
+  Create a function called addingFactory that takes in
+  one parameter (it will be a number).
 
-//   addingFactory should return a function that takes in
-//   one parameter (this will be another number).
+  addingFactory should return a function that takes in
+  one parameter (this will be another number).
 
-//   The (inner) function that's being returned should add
-//   the two parameters together and return the sum.
-// */
+  The (inner) function that's being returned should add
+  the two parameters together and return the sum.
+*/
 
-// // CODE HERE
+// CODE HERE
 
-// /*
-//   Now that you have addingFactory, you can create other
-//   functions from it. 
+addingFactory = num1 => cb => num1 + cb
 
-//   You're going to invoke addingFactory and save the result
-//   to a new variable. 
+/*
+  Now that you have addingFactory, you can create other
+  functions from it. 
 
-//   Create a variable called addTen and set it equal to 
-//   the invocation of addingFactory passing in the number
-//   10 as an arguemnt.
-// */
+  You're going to invoke addingFactory and save the result
+  to a new variable. 
 
-// // CODE HERE
+  Create a variable called addTen and set it equal to 
+  the invocation of addingFactory passing in the number
+  10 as an arguemnt.
+*/
 
-// /*
-//   Now the inner function is stored in the addTen variable! 
+// CODE HERE
 
-//   Call the addTen function passing in another number and
-//   console log the result.
+let addTen = addingFactory(10)
 
-//   Call it a second time, passing in a different number
-//   to see the different outputs.
-// */
+/*
+  Now the inner function is stored in the addTen variable! 
 
-// // CODE HERE
+  Call the addTen function passing in another number and
+  console log the result.
 
-// /*
-//   Let's make another function from the addingFactory. 
+  Call it a second time, passing in a different number
+  to see the different outputs.
+*/
 
-//   This time, pass in your favorite number and name
-//   the variable addNUMBER with the name of the number
-//   you chose. 
+// CODE HERE
 
-//   Once you create that, you can invoke the function
-//   to add any number to your favorite number!
-// */
+console.log(addTen(10))
+console.log(addTen(31))
 
-// // CODE HERE
+/*
+  Let's make another function from the addingFactory. 
+
+  This time, pass in your favorite number and name
+  the variable addNUMBER with the name of the number
+  you chose. 
+
+  Once you create that, you can invoke the function
+  to add any number to your favorite number!
+*/
+
+// CODE HERE
+
+let addSeventeen = addingFactory(17)
+
+console.log(addSeventeen(23))
