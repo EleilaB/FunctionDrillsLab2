@@ -148,14 +148,14 @@ uniq(names, cb => {
   console.log('The new names array with all the duplicate items removed is', cb)
 })
 
-// ////////// PROBLEM 6 //////////
+////////// PROBLEM 6 //////////
 
-// /* 
-//   Write a function called each that takes in an array of names and a callback function. 
-//   For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
-// */
+/* 
+  Write a function called each that takes in an array of names and a callback function. 
+  For each name in the array, invoke the callback and pass in the name and the name's index as arguments.
+*/
 
-// // CODE HERE 
+// CODE HERE 
 
 function each(arr, cb){
   for(let i = 0; i < arr.length; i++){
@@ -163,59 +163,66 @@ function each(arr, cb){
   }
 }
 
-// /*
-//   Invoke the each function, passing in the names array and a callback function.
-//   The callback function should take in two paremeters, item and index.
-//   The callback should print a string that says:
-//   'The item at index [INDEXPARAM] is [ITEMPARAM].'
-// */
+/*
+  Invoke the each function, passing in the names array and a callback function.
+  The callback function should take in two paremeters, item and index.
+  The callback should print a string that says:
+  'The item at index [INDEXPARAM] is [ITEMPARAM].'
+*/
 
-// // CODE HERE
+// CODE HERE
 
 each(names, (item, index) => {
   console.log(`The item at index ${index} is ${item}.`)
 })
 
-// ////////// PROBLEM 7 //////////
+////////// PROBLEM 7 //////////
 
-// /*
-//   Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
-//   When the correct user object is found, invoke the callback with the user object as an argument.
-// */
+/*
+  Write a function called getUserById that takes in three parameters: an array of objects (users), an id and a callback, and searches for the user with a matching id.
+  When the correct user object is found, invoke the callback with the user object as an argument.
+*/
 
-// // Do not edit the code below.
-// var users = [
-//   {
-//     id: '12d',
-//     email: 'tyler@gmail.com',
-//     name: 'Tyler',
-//     address: '167 East 500 North'
-//   },
-//   {
-//     id: '15a',
-//     email: 'cahlan@gmail.com',
-//     name: 'Cahlan',
-//     address: '135 East 320 North'
-//   },
-//   {
-//     id: '16t',
-//     email: 'ryan@gmail.com',
-//     name: 'Ryan',
-//     address: '192 East 32 North'
-//   },
-// ]
-// // Do not edit the code above.
+// Do not edit the code below.
+var users = [
+  {
+    id: '12d',
+    email: 'tyler@gmail.com',
+    name: 'Tyler',
+    address: '167 East 500 North'
+  },
+  {
+    id: '15a',
+    email: 'cahlan@gmail.com',
+    name: 'Cahlan',
+    address: '135 East 320 North'
+  },
+  {
+    id: '16t',
+    email: 'ryan@gmail.com',
+    name: 'Ryan',
+    address: '192 East 32 North'
+  },
+]
+// Do not edit the code above.
 
-// // CODE HERE 
+// CODE HERE 
 
+function getUserById(arr, id, cb){
+  for(let i = 0; i < arr.length; i++){
+    if(arr[i]['id'] === id){
+      cb(arr[i])
+    }
+  }
+}
 
-// // UNCOMMENT THE FUNCTION CALL BELOW
-// // RUN THIS FILE WITH NODE
-// // CHECK YOUR ANSWER
+// UNCOMMENT THE FUNCTION CALL BELOW
+// RUN THIS FILE WITH NODE
+// CHECK YOUR ANSWER
 
-// // getUserById(users, '16t', user => {
-// //   console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
-// // })
+getUserById(users, '16t', user => {
+  console.log('The user with the id 16t has the email of ' + user.email + ' the name of ' + user.name + ' and the address of ' + user.address) 
+})
 
 // ////////// CHALLENGE //////////
 
