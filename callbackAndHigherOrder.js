@@ -121,14 +121,20 @@ contains(names, 'Colt', result => {
 // CODE HERE
 
 function uniq(arr, cb){
-  uniqArr = new Array
-  arr.forEach((c) => {
-    if (!uniqArr.includes(c)) {
-        uniqArr.push(c);
+  let newArr = [];
+  for(let i = 0; i < arr.length; i++){
+    let itemInArray = false;
+    for(let j = 0; j < newArr.length; j++){
+      if(arr[i] === newArr[j]){
+        itemInArray = true
+      }
     }
-  }); return cb(uniqArr)
+    if(itemInArray === false){
+      newArr.push(arr[i])
+    }
+  }
+  return cb(newArr)
 }
-
 /*
   Invoke the uniq function, passing in the names array from above and a callback function.
   The callback function should take in one parameter called uniqArr.
@@ -138,8 +144,8 @@ function uniq(arr, cb){
 
 // CODE HERE
 
-uniq(names, uniqArr => {
-  console.log('The new names array with all the duplicate items removed is' + uniqArr)
+uniq(names, cb => {
+  console.log('The new names array with all the duplicate items removed is', cb)
 })
 
 // ////////// PROBLEM 6 //////////
